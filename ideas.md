@@ -2,7 +2,7 @@
 
 **Pitch:** A web app for coaches who work across multiple sports/teams (e.g. Union Rugby, Touch Rugby, Wrestling) to create teams, plan training sessions from a drill library, and track progress over time — all in one place, without re-learning a new tool per sport.
 
-**Stack:** Full TypeScript, Next.js-style (App Router, Server Components/Actions), single deployable app.
+**Stack:** Full TypeScript, Next.js-style (App Router, Server Components/Actions), single deployable app., MongoDB Atlas for the db
 
 **Core concept:**
 - A user can create multiple **teams**, each tied to a **sport**.
