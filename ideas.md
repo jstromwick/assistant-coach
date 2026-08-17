@@ -17,10 +17,10 @@
 
 **Data model shape (rough):**
 - `User` → has many `TeamMemberships`
-- `Team` → belongs to a `Sport`, has many `Sessions`
+- `Team` → belongs to a `Sport`, has many `TrainingSessions`
 - `Sport` → defines available `DrillCategories` / session template fields
 - `Drill` → tagged by sport + category (e.g. "defense", "conditioning", "technique")
-- `Session` → belongs to a `Team`, has ordered list of `Drills` + notes/duration
+- `TrainingSession` → belongs to a `Team`, has ordered list of `Drills` + notes/duration
 
 **Sport-specific handling:** Sport-specific templates/fields per sport (not fully generic) — e.g. Union Rugby sessions have forwards/backs breakdown, Wrestling sessions have weight-class/position breakdown, Touch Rugby sessions have attack/defense phase breakdown. Drill library and session template both flex based on the sport attached to the team.
 
