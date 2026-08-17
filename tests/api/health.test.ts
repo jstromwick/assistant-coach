@@ -16,7 +16,7 @@ describe("GET /api/health", () => {
 describe("GET /api/health when the database is unreachable", () => {
   const baseUrl = withServer(3312, {
     ...process.env,
-    MONGO_CONNECTION_STRING: "mongodb://localhost:1/nonexistent",
+    MONGODB_URI: "mongodb://localhost:1/nonexistent",
   });
 
   it(

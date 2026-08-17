@@ -5,18 +5,16 @@ declare global {
 }
 
 function connect(): Promise<MongoClient> {
-  const template = process.env.MONGO_CONNECTION_STRING;
-  const password = process.env.MONGO_PASSWORD;
-  if (!template || !password) {
-    throw new Error(
-      "Missing MONGO_CONNECTION_STRING or MONGO_PASSWORD environment variable",
-    );
+  const uri = process.env.MONGODB_URI;
+  if (!uri) {
+    throw new Error("Missing MONGODB_URI environment variable");
   }
-  const uri = template.replace(
-    "<db_password>",
-    encodeURIComponent(password),
-  );
-  return new MongoClient(uri, { serverSelectionTimeoutMS: 5000 }).connect();
+
+  return new MongoClient(uri, {
+    appName: "devrel.vercel.integration",
+    maxIdleTimeMS: 5000,
+    serverSelectionTimeoutMS: 5000,
+  }).connect();
 }
 
 export function getMongoClientPromise(): Promise<MongoClient> {

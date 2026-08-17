@@ -11,7 +11,7 @@ npm run test         # run the test suite (vitest)
 npm run typecheck   # type-check without emitting
 ```
 
-Requires `MONGO_CONNECTION_STRING` and `MONGO_PASSWORD` in `.env` (see `.env` for the expected shape — the connection string is Atlas's own template with `<db_password>` as a literal placeholder, substituted at runtime).
+Requires `MONGODB_URI` in `.env` — provisioned by the Vercel MongoDB Atlas integration and mirrored into the Vercel project's Production/Preview environments.
 
 ## Folder structure
 

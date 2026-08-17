@@ -6,7 +6,8 @@ export async function GET() {
     const client = await getMongoClientPromise();
     await client.db("admin").command({ ping: 1 });
     return NextResponse.json({ status: "ok", db: "connected" });
-  } catch {
+  } catch (error) {
+    console.error("Health check: MongoDB connection failed", error);
     return NextResponse.json(
       { status: "error", db: "unreachable" },
       { status: 503 },
