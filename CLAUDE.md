@@ -1,3 +1,7 @@
+## Git workflow
+
+Do new work on a feature branch — create one before starting if not already on one. Push it to `origin` when finished; don't commit directly to `main`.
+
 ## Agent skills
 
 ### Issue tracker
