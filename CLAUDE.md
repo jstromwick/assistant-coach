@@ -1,3 +1,7 @@
+## Git workflow
+
+Do new work on a feature branch — create one before starting if not already on one. Push it to `origin` when finished; don't commit directly to `main`. Once implementation is complete and the `code-review` skill passes, open a pull request.
+
 ## Agent skills
 
 ### Issue tracker
